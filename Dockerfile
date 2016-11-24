@@ -8,11 +8,11 @@ RUN yum update -y
 #install common tools
 RUN yum install -y wget unzip which
 
-#install libreoffice 5.2.2 (/opt/libreoffice5.2)
-RUN wget -q http://ftp.wayne.edu/tdf/libreoffice/stable/5.2.2/rpm/x86_64/LibreOffice_5.2.2_Linux_x86-64_rpm.tar.gz \
+#install libreoffice 5.0.6.3 (/opt/libreoffice5.0)
+RUN wget -q https://downloadarchive.documentfoundation.org/libreoffice/old/5.0.6.3/rpm/x86_64/LibreOffice_5.0.6.3_Linux_x86-64_rpm.tar.gz \
 && mkdir /tmp/LibreOffice \
-&& tar -xzf LibreOffice_5.2.2_Linux_x86-64_rpm.tar.gz -C /tmp/LibreOffice \
-&& yum localinstall -y /tmp/LibreOffice/LibreOffice_5.2.2.2_Linux_x86-64_rpm/RPMS/*  \
+&& tar -xzf LibreOffice_5.0.6.3_Linux_x86-64_rpm.tar.gz -C /tmp/LibreOffice \
+&& yum localinstall -y /tmp/LibreOffice/LibreOffice_5.0.6.3_Linux_x86-64_rpm/RPMS/*  \
 && rm -rf /tmp/LibreOffice
 
 #install openjdk 8
