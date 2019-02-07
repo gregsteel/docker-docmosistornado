@@ -4,11 +4,11 @@
 * 2.4, [Dockerfile](https://github.com/kunalrao/docker-docmosistornado/raw/2.4/Dockerfile)
 
 ## How to run?
-docker run -ti -p 8090:8090 kunalrao/docmosis-tornado:2.4
+* docker run -ti -p 8090:8090 kunalrao/docmosis-tornado:2.4
 
 ## To build and run
-docker build -t docmosis-tornado .
-docker run -ti -p 8090:8090 --name=docmosis-tornado -v $PWD/templates:/projects/tornado/templates:ro docmosis-tornado:latest
+* docker build -t docmosis-tornado .
+* docker run -ti -p 8090:8090 --name=docmosis-tornado -v $PWD/templates:/projects/tornado/templates:ro docmosis-tornado:latest
 
 ## To configure:
 * go to http://localhost:8090
